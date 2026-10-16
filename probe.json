@@ -1,0 +1,414 @@
+{
+  "line": {
+    "Id": "0QLKY0000023bGr4AI",
+    "QuoteId": "0Q0KY000001eXv70AE",
+    "Product2": {
+      "attributes": {
+        "type": "Product2",
+        "url": "/services/data/v64.0/sobjects/Product2/01tKY000003XUhFYAW"
+      },
+      "Name": "Standard Cellular Tablet"
+    },
+    "Quantity": 1,
+    "ListPrice": 119,
+    "UnitPrice": 119,
+    "NetUnitPrice": 0,
+    "Discount": null,
+    "DiscountAmount": null,
+    "TotalAdjustmentAmount": 0,
+    "PriceWaterfallIdentifier": "ref_bf8749cd_8a14_46da_976d_7597fe8a0760:521129019709318"
+  },
+  "waterfall [ref + exec]": {
+    "apiExecutionId": "521129019358764",
+    "contextDefinitionVersionId": "11OKY000000L64v2AC",
+    "contextMappingId": "11jKY000000LyHBYA0",
+    "currencyCode": "USD",
+    "executionEndTimestamp": "2026-02-03T00:13:20.898Z",
+    "executionId": "521129019709318",
+    "executionStartTimestamp": "2026-02-03T00:13:20.638Z",
+    "lineItemId": "ref_bf8749cd_8a14_46da_976d_7597fe8a0760",
+    "output": {
+      "IsDerived": false,
+      "NetUnitPrice": 0,
+      "Subtotal": 0,
+      "isParallelExecution": false,
+      "ListPrice": 119,
+      "section-0-output": 119,
+      "Output Variable": 119
+    },
+    "success": true,
+    "usageType": "Pricing",
+    "waterfall": [
+      {
+        "fieldToTagNameMapping": {
+          "IsDerived": "DerivedPricingAttribute",
+          "NetUnitPrice": "NetUnitPrice",
+          "Product2Id": "Product",
+          "ListPriceField": "Constant_UnitPrice_Price_Book_Entry_Decision_Table_v2_LP",
+          "ProductSellingModelId": "ProductSellingModel",
+          "Subtotal": "ItemNetTotalPrice",
+          "Quantity": "LineItemQuantity",
+          "Pricebook2Id": "PriceBooks",
+          "LineItemId": "LineItem",
+          "ContractId": "ItemContract",
+          "ListPrice": "ListPrice",
+          "PriceWaterfall": "price_water_fall"
+        },
+        "hideWaterfall": false,
+        "inputParameters": {
+          "NetUnitPrice": null,
+          "Product2Id": "01tKY000003XUhFYAW",
+          "ListPriceField": "UnitPrice",
+          "ProductSellingModelId": "0jPKY000000i8Dm2AI",
+          "Quantity": 1,
+          "Pricebook2Id": "01sKY000001P4dkYAC",
+          "ContractId": null,
+          "LineItemId": "ref_bf8749cd_8a14_46da_976d_7597fe8a0760"
+        },
+        "outputParameters": {
+          "IsDerived": false,
+          "Subtotal": 119,
+          "ListPrice": 119
+        },
+        "pricingElement": {
+          "adjustments": [
+            {
+              "AdjustmentValue": null,
+              "AdjustmentType": null
+            }
+          ],
+          "elementType": "ListPrice",
+          "name": "Price Book Entries"
+        },
+        "profileAccess": [],
+        "sequence": 0,
+        "tasksInfo": []
+      },
+      {
+        "fieldToTagNameMapping": {
+          "IsDerived": "DerivedPricingAttribute",
+          "NetUnitPrice": "NetUnitPrice",
+          "section-0-input1": "EffectiveFrom",
+          "Subtotal": "ItemNetTotalPrice",
+          "LineItemId": "LineItem",
+          "ContractId": "ItemContract",
+          "PriceWaterfall": "price_water_fall",
+          "section-0-output": "PricingDate"
+        },
+        "hideWaterfall": false,
+        "inputParameters": {
+          "IsDerived": false,
+          "Subtotal": 119,
+          "NetUnitPrice": null,
+          "ContractId": null,
+          "LineItemId": "ref_bf8749cd_8a14_46da_976d_7597fe8a0760",
+          "section-0-input1": null
+        },
+        "outputParameters": {
+          "section-0-output": null
+        },
+        "pricingElement": {
+          "adjustments": [],
+          "elementType": "AssignmentElement",
+          "name": "Assignment"
+        },
+        "profileAccess": [],
+        "sequence": 1,
+        "tasksInfo": []
+      },
+      {
+        "fieldToTagNameMapping": {
+          "IsDerived": "DerivedPricingAttribute",
+          "NetUnitPrice": "NetUnitPrice",
+          "section-0-input1": "InputUnitPrice",
+          "Subtotal": "ItemNetTotalPrice",
+          "LineItemId": "LineItem",
+          "ContractId": "ItemContract",
+          "PriceWaterfall": "price_water_fall",
+          "section-0-output": "NetUnitPrice"
+        },
+        "hideWaterfall": false,
+        "inputParameters": {
+          "IsDerived": false,
+          "NetUnitPrice": null,
+          "filterRules": {
+            "filterCriteria": [
+              "ItemPricingSource != (&#39;LastTransaction&#39;)",
+              "DerivedPricingAttribute != (&#39;null&#39;)",
+              "DerivedPricingAttribute == (false)"
+            ],
+            "filterDataInput": [
+              "DerivedPricingAttribute = false",
+              "ItemPricingSource = "
+            ],
+            "filterCondition": "1 AND 2 AND 3",
+            "isFiltered": true
+          },
+          "section-0-input1": 119,
+          "Subtotal": 119,
+          "ContractId": null,
+          "LineItemId": "ref_bf8749cd_8a14_46da_976d_7597fe8a0760"
+        },
+        "outputParameters": {
+          "section-0-output": 119
+        },
+        "pricingElement": {
+          "adjustments": [],
+          "elementType": "AssignmentElement",
+          "name": "Assignment"
+        },
+        "profileAccess": [],
+        "sequence": 2,
+        "tasksInfo": []
+      },
+      {
+        "fieldToTagNameMapping": {
+          "IsDerived": "DerivedPricingAttribute",
+          "LineItemQuantity": "LineItemQuantity",
+          "NetUnitPrice": "NetUnitPrice",
+          "Subtotal": "ItemNetTotalPrice",
+          "LineItemId": "LineItem",
+          "ContractId": "ItemContract",
+          "InputUnitPrice": "InputUnitPrice",
+          "PriceWaterfall": "price_water_fall",
+          "Output Variable": "ItemNetTotalPrice"
+        },
+        "hideWaterfall": false,
+        "inputParameters": {
+          "IsDerived": false,
+          "LineItemQuantity": 1,
+          "NetUnitPrice": 119,
+          "filterRules": {
+            "filterCriteria": [
+              "ItemPricingSource != (&#39;LastTransaction&#39;)",
+              "DerivedPricingAttribute != (&#39;null&#39;)",
+              "DerivedPricingAttribute == (false)"
+            ],
+            "filterDataInput": [
+              "DerivedPricingAttribute = false",
+              "ItemPricingSource = "
+            ],
+            "filterCondition": "1 AND 2 AND 3",
+            "isFiltered": true
+          },
+          "Calculation Formula": "InputUnitPrice * LineItemQuantity",
+          "Subtotal": 119,
+          "ContractId": null,
+          "LineItemId": "ref_bf8749cd_8a14_46da_976d_7597fe8a0760",
+          "InputUnitPrice": 119
+        },
+        "outputParameters": {
+          "Output Variable": 119
+        },
+        "pricingElement": {
+          "adjustments": [],
+          "elementType": "FormulaBasedPricing",
+          "name": "Formula Based Pricing"
+        },
+        "profileAccess": [],
+        "sequence": 3,
+        "tasksInfo": []
+      },
+      {
+        "fieldToTagNameMapping": {
+          "PriceAdjustmentScheduleId": "AttributePASIdConstant",
+          "AttributeValue": "AttributeValue",
+          "Subtotal": "ItemNetTotalPrice",
+          "Quantity": "LineItemQuantity",
+          "ProductId": "Product",
+          "ContractId": "ItemContract",
+          "PriceWaterfall": "price_water_fall",
+          "IsDerived": "DerivedPricingAttribute",
+          "NetUnitPrice": "NetUnitPrice",
+          "ProductSellingModelId": "ProductSellingModel",
+          "IsPriceImpacting": "PriceImpactingAttribute",
+          "AttributeName": "Attribute",
+          "EffectiveFrom": "EffectiveDate",
+          "LineItemId": "LineItem",
+          "InputUnitPrice": "NetUnitPrice",
+          "EffectiveTo": "EffectiveDate"
+        },
+        "hideWaterfall": false,
+        "inputParameters": {
+          "PriceAdjustmentScheduleId": "84XKY0000006rYp2AI",
+          "filterRules": {
+            "filterCriteria": [
+              "IsContracted == (&#39;null&#39;)",
+              "IsContracted == (false)",
+              "ItemPricingSource != (&#39;LastTransaction&#39;)"
+            ],
+            "filterDataInput": [
+              "IsContracted = ",
+              "ItemPricingSource = "
+            ],
+            "filterCondition": "(1 OR 2) AND 3",
+            "isFiltered": true
+          },
+          "tablet_storage_size": "128GB",
+          "AttributeAdjConditionsHash": "ac94883afde4e9af8d1a183c6ff75ddf",
+          "Quantity": 1,
+          "ProductId": "01tKY000003XUhFYAW",
+          "ContractId": null,
+          "IsDerived": false,
+          "ProductSellingModelId": "0jPKY000000i8Dm2AI",
+          "EffectiveFrom": 1770077600573,
+          "LineItemId": "ref_bf8749cd_8a14_46da_976d_7597fe8a0760",
+          "InputUnitPrice": 119,
+          "EffectiveTo": 1770077600573
+        },
+        "outputParameters": {
+          "Subtotal": 119,
+          "NetUnitPrice": 119
+        },
+        "pricingElement": {
+          "adjustments": [],
+          "elementType": "AttributeDiscount",
+          "name": "Attribute Discount Entries"
+        },
+        "profileAccess": [],
+        "sequence": 4,
+        "tasksInfo": []
+      },
+      {
+        "fieldToTagNameMapping": {
+          "PriceAdjustmentScheduleId": "BundlePASIdConstant",
+          "InclusivePrice": "InclusivePrice",
+          "RootBundleId": "RootItemProduct",
+          "Subtotal": "ItemNetTotalPrice",
+          "Quantity": "LineItemQuantity",
+          "ProductId": "Product",
+          "ContractId": "ItemContract",
+          "PriceWaterfall": "price_water_fall",
+          "ParentProductSellingModelId": "MainItemProductSellingModel",
+          "IsDerived": "DerivedPricingAttribute",
+          "NetUnitPrice": "NetUnitPrice",
+          "RootProductSellingModelId": "RootProductSellingModel",
+          "ParentProductId": "MainItemProduct",
+          "ProductSellingModelId": "ProductSellingModel",
+          "EffectiveFrom": "EffectiveDate",
+          "LineItemId": "LineItem",
+          "InputUnitPrice": "NetUnitPrice",
+          "EffectiveTo": "EffectiveDate"
+        },
+        "hideWaterfall": false,
+        "inputParameters": {
+          "PriceAdjustmentScheduleId": "84XKY0000006rYq2AI",
+          "filterRules": {
+            "filterCriteria": [
+              "ItemPricingSource != (&#39;LastTransaction&#39;)"
+            ],
+            "filterDataInput": [
+              "ItemPricingSource = "
+            ],
+            "filterCondition": "1",
+            "isFiltered": true
+          },
+          "InclusivePrice": true,
+          "RootBundleId": "01tKY000003XUtnYAG",
+          "Quantity": 1,
+          "ProductId": "01tKY000003XUhFYAW",
+          "ContractId": null,
+          "IsDerived": false,
+          "ParentProductSellingModelId": "0jPKY000000i8Dm2AI",
+          "RootProductSellingModelId": "0jPKY000000i8Dm2AI",
+          "ParentProductId": "01tKY000003XUtnYAG",
+          "ProductSellingModelId": "0jPKY000000i8Dm2AI",
+          "EffectiveFrom": 1770077600573,
+          "LineItemId": "ref_bf8749cd_8a14_46da_976d_7597fe8a0760",
+          "InputUnitPrice": 119,
+          "EffectiveTo": 1770077600573
+        },
+        "outputParameters": {
+          "Subtotal": 0,
+          "NetUnitPrice": 0
+        },
+        "pricingElement": {
+          "adjustments": [],
+          "elementType": "BundleDiscount",
+          "name": "Bundle Based Adjustment Entries"
+        },
+        "profileAccess": [],
+        "sequence": 5,
+        "tasksInfo": []
+      }
+    ]
+  },
+  "waterfall [line Id + exec]": {
+    "error": {
+      "errorCode": "FETCH_EXPLAINABILITY_LOG_ERROR",
+      "message": "We couldn\u2019t fetch pricing waterfall logs for your quote. Verify your Price Waterfall settings and try again."
+    },
+    "lineItemId": "0QLKY0000023bGr4AI",
+    "output": {},
+    "success": false,
+    "waterfall": []
+  },
+  "waterfall [exec + ref]": {
+    "error": {
+      "errorCode": "FETCH_EXPLAINABILITY_LOG_ERROR",
+      "message": "We couldn\u2019t fetch pricing waterfall logs for your quote. Verify your Price Waterfall settings and try again."
+    },
+    "lineItemId": "521129019709318",
+    "output": {},
+    "success": false,
+    "waterfall": []
+  },
+  "QuoteLinePriceAdjustment describe": [
+    "Id",
+    "IsDeleted",
+    "Name",
+    "CreatedDate",
+    "CreatedById",
+    "LastModifiedDate",
+    "LastModifiedById",
+    "SystemModstamp",
+    "QuoteLineItemId",
+    "AdjustmentSource",
+    "TotalAmount",
+    "AdjustmentType",
+    "Description",
+    "AdjustmentValue",
+    "Priority",
+    "AdjustmentAmountScope",
+    "PriceAdjustmentCauseId"
+  ],
+  "QuoteLinePriceAdjustment rows": [],
+  "PricingProcessExecution describe": [
+    "Id",
+    "OwnerId",
+    "IsDeleted",
+    "Name",
+    "CreatedDate",
+    "CreatedById",
+    "LastModifiedDate",
+    "LastModifiedById",
+    "SystemModstamp",
+    "LastViewedDate",
+    "LastReferencedDate",
+    "ExecutionKey",
+    "ExecutionTypeKey",
+    "ExecutionType",
+    "Status",
+    "Message"
+  ],
+  "PricingProcessExecution rows": [],
+  "PricingApiExecution describe": [
+    "Id",
+    "OwnerId",
+    "IsDeleted",
+    "Name",
+    "CreatedDate",
+    "CreatedById",
+    "LastModifiedDate",
+    "LastModifiedById",
+    "SystemModstamp",
+    "LastViewedDate",
+    "LastReferencedDate",
+    "ExecutionKey",
+    "Status",
+    "ReferenceKey",
+    "ApiEndpoint",
+    "ApiType"
+  ],
+  "PricingApiExecution rows": []
+}
