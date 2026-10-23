@@ -99,7 +99,7 @@ class SalesforceCLI:
             with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
                 json.dump(body, f)
                 tmp = f.name
-            args += ["--body", tmp]
+            args += ["--body", "@" + tmp]  # "@" = read the body from this file
         try:
             out = self._exec(args)
         finally:
